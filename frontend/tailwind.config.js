@@ -14,7 +14,8 @@ module.exports = {
         // Customize or add new colors
         primary: '#D73F09',
         secondary: '#CE2153',
-        tertiary: '#000000',
+        tertiary: '#1C1C1C',
+        white: '#FFFFFF',
         warning: '#F6E05E',
         success: '#68D391',
         danger: '#F56565',
@@ -43,9 +44,10 @@ module.exports = {
       // Extend variants here
     },
   },
-  plugins: [
+  plugins: [require("daisyui")
     
   ],
+  
 };
 
 
