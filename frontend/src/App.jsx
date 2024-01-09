@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes, BrowserRouter, useNavigate } from "react-router-dom";
-import Home from "./components/Home";
-import Login from "./components/Login";
+import Landing from './pages/Landing'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
