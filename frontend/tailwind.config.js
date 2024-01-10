@@ -19,6 +19,7 @@ module.exports = {
         warning: '#F6E05E',
         success: '#68D391',
         danger: '#F56565',
+        muted: '#b86548',
         // ...
       },
       animation: {
