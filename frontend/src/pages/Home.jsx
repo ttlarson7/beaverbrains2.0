@@ -1,12 +1,30 @@
 import React from 'react';
 import LandingNav from './components/LandingNav';
 import Cards from './components/Cards';
+import { useContext, useEffect, useState } from "react";
+import { useUser } from "@clerk/clerk-react";
+import { UserContext } from "../App";
+
+
 export default function Home() {
+
+    const { isSignedIn, user, isLoaded } = useUser();
+    const [userid, setUserid] = useContext(UserContext);
+
+    // useEffect(() => {
+    //     if (isLoaded && isSignedIn)  {
+    //         setUserid(user.id)
+    //     }
+    // }, [isLoaded, isSignedIn, user.id])
+    
+
+    
+
     return (
         <div className="flex">
             <LandingNav page={2} />
             <div className="flex items-center w-full flex-col">
-                <h1 className="text-3xl font-bold text-w">Matches</h1>
+                <h1 className="text-7xl font-bold text-w">Matches</h1>
                 <div>
                     <Cards />
                 </div>
@@ -31,10 +49,7 @@ export default function Home() {
                 </div>
                 
             
-            {/* <div className="bg-primary">
-            <h1 className= "text-xl bg-primary">hello</h1>
-            <p>Welcome to Beaver Brains!</p>
-        </div> */}
+        
 
             </div>
             

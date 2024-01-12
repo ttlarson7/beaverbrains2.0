@@ -1,33 +1,25 @@
-import { useState } from 'react'
+
 import { Route, Routes, BrowserRouter, useNavigate } from "react-router-dom";
 import Landing from './pages/Landing'
 import Home from './pages/Home'
 import './App.css'
 import { SignOutButton, SignInButton, SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react"
 import Login from './pages/Login'
+import { useState, useContext, createContext } from 'react';
 
 
-const ClerkRoutes = () => {
-  
-
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/sign-in" element={<SingIn />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </>
-  )
-  
-}
-
+export const UserContext = createContext();
 
 
 function App() {
+
+  const [userid, setUserid] = useState(null);
+  const [matches, setMatches] = useState(null);
+  const [possibleMatches, setPossibleMatches] = useState(null);
   
 
   return (
+    <UserContext.Provider value={[ userid, setUserid, matches, setMatches, possibleMatches, setPossibleMatches ]}>
     <>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -46,7 +38,8 @@ function App() {
             }
           />
       </Routes>
-    </>
+      </>
+      </UserContext.Provider>
   )
 }
 
