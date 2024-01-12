@@ -1,9 +1,9 @@
 import React from 'react';
-import LandingNav from './components/Navbars/LandingNav';
+import LandingNav from './components/LandingNav';
 export default function Landing() {
     return ( 
         <div>
-            <LandingNav />
+            <LandingNav page={1} />
             <div className="hero min-h-screen bg-transparent mb-10">
                 <div className="hero-content text-center">
                     <div className="flex flex-col">
@@ -14,7 +14,7 @@ export default function Landing() {
                     </div>
                 </div>
                 </div> 
-                <div className="hero min-h-1/2 bg-primary">
+                <div className="hero min-h-1/2 bg-muted">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src="https://pics.craiyon.com/2024-01-09/nfyXRVbgR76Pga8L7la1Zw.webp" className="max-w-sm rounded-lg shadow-2xl" alt="Confused Beaver Image" />
                         <div>

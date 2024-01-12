@@ -15,10 +15,11 @@ module.exports = {
         primary: '#D73F09',
         secondary: '#CE2153',
         tertiary: '#1C1C1C',
-        white: '#FFFFFF',
+        w: '#FFFFFF',
         warning: '#F6E05E',
         success: '#68D391',
         danger: '#F56565',
+        muted: '#b86548',
         // ...
       },
       animation: {
